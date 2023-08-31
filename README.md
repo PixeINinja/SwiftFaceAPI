@@ -1,8 +1,8 @@
 ---
 
-## SwapFace FastAPI Server Documentation
+## SwiftSwap FastAPI Server Documentation
 
-Welcome to the SwapFace API. This service allows users to swap faces between images and videos. Here's a quick guide on how to utilize the service.
+Welcome to the SwiftSwap API. This service allows users to swap faces between images and videos. Here's a quick guide on how to utilize the service.
 
 ### Endpoints:
 
@@ -75,4 +75,4 @@ Welcome to the SwapFace API. This service allows users to swap faces between ima
 
 ---
 
-Feel free to post this documentation in your group or wherever required so that users can understand how to interact with the SwapFace API.
+Feel free to post this documentation in your group or wherever required so that users can understand how to interact with the SwiftSwap API.
