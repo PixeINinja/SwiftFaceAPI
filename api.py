@@ -54,23 +54,35 @@ async def save_file(file, filename: str):
         buffer.write(contents)
 
 async def process_swap_image(task_id, image, target_image, custom_strings):
-    await asyncio.sleep(10)
-    swapped_img = str(uuid.uuid4()) + '.jpg'
-    swapped_image = open("aidemo/demo.jpg", "rb")
+    swapped_img_filename = str(uuid.uuid4()) + '.jpg'
+
+    # This will be replaced later on
+
+    # swapped_image = await some_aiprocess_image(image, target_image, custom_strings) #actual function # return BufferedReader
+    swapped_image = open("aidemo/demo.jpg", "rb") # demo
+    await asyncio.sleep(10) #Asssume delay for demo
+
+    # END
 
 
-    await save_file(swapped_image, swapped_img)  # Mock saving the processed image
+    await save_file(file=swapped_image, filename=swapped_img_filename)  # Mock saving the processed image
     tasks[task_id]["status"] = "completed"
-    tasks[task_id]["result"] = f"Face swapped and saved as {swapped_img}"
-    tasks[task_id]["link"] = f"/static/{swapped_img}"
+    tasks[task_id]["result"] = f"Face swapped and saved as {swapped_img_filename}"
+    tasks[task_id]["link"] = f"/static/{swapped_img_filename}"
 
 async def process_swap_video(task_id, image, target_video, custom_strings):
-    await asyncio.sleep(10)
     swapped_mp4 = str(uuid.uuid4()) + '.mp4'
-    swapped_video = open("aidemo/demo.mp4", "rb")
+
+    # This will be replaced later on
+
+    # swapped_video = await some_aiprocess_video(image, target_video, custom_strings) #actual function # return BufferedReader
+    swapped_video = open("aidemo/demo.mp4", "rb") # demo
+    await asyncio.sleep(10) #Asssume delay for demo
+
+    # END
 
     
-    await save_file(swapped_video, swapped_mp4)  # Mock saving the processed video
+    await save_file(file=swapped_video, filename=swapped_mp4)  # Mock saving the processed video
     tasks[task_id]["status"] = "completed"
     tasks[task_id]["result"] = f"Face swapped in video and saved as {swapped_mp4}"
     tasks[task_id]["link"] = f"/static/{swapped_mp4}"
